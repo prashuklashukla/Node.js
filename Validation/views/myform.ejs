@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Validation Form</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+  .error-box {
+  background-color: #ffe6e6;
+  border: 1px solid #ff4d4d;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.error-box ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.error-box li {
+  color: #cc0000;
+  font-size: 14px;
+}
+
+      form {
+        width: 320px;
+        margin: 60px auto;
+        background: #ffffff;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      label {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 8px;
+        margin: 6px 0 15px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      input:focus,
+      select:focus {
+        outline: none;
+        border-color: #555;
+      }
+
+      button {
+        width: 100%;
+        padding: 8px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+   
+    <!-- <form action="/saveform" method="POST">
+      <h2>User Form</h2>
+ <% if (errors.length > 0) { %>
+  <div class="error-box">
+    <ul>
+      <% errors.forEach(error => { %>
+        <li><%= error.msg %></li>
+      <% }); %>
+    </ul>
+  </div>
+<% } %>
+
+      <label>Name:</label>
+      <input type="text" name="username" />
+
+      <label>Email:</label>
+      <input type="email" name="useremail" />
+
+      <label>Password:</label>
+      <input type="password" name="userpassword" />
+
+      <label>City:</label>
+      <select name="usercity">
+        <option value="">Select City</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Pune">Pune</option>
+        <option value="Bangalore">Bangalore</option>
+      </select>
+
+      <label>Age:</label>
+      <input type="number" name="userage" />
+
+      <button type="submit">Submit</button>
+    </form> -->
+  <form action="/saveform" method="POST">
+  <h2>User Form</h2>
+
+  <% if (errors.length > 0) { %>
+    <div class="error-box">
+      <ul>
+        <% errors.forEach(error => { %>
+          <li><%= error.msg %></li>
+        <% }); %>
+      </ul>
+    </div>
+  <% } %>
+
+  <label>Name:</label>
+  <input type="text" name="username" />
+
+  <label>Email:</label>
+  <input type="email" name="email" />
+
+  <label>Password:</label>
+  <input type="password" name="password" />
+
+  <label>City:</label>
+  <select name="city">
+    <option value="">Select City</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Pune">Pune</option>
+    <option value="Bangalore">Bangalore</option>
+  </select>
+
+  <label>Age:</label>
+  <input type="number" name="age" />
+
+  <button type="submit">Submit</button>
+</form>
+
+  </body>
+
+</html>
