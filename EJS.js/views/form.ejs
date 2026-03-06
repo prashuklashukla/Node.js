@@ -1,0 +1,19 @@
+<%- include("header") -%>
+  
+      <div class="row mb-5">
+        <div class="col">
+          <form action="/submit" method="post">
+            Entry name: <input type="text" name="myname" /> <br /><br />
+            <input type="submit" placeholder="submit" />
+          </form>
+          <br><br>
+            <div class="row mt-3">
+        <div class="col bg-warning">
+          <%= 
+            message %> 
+        </div>
+      </div>
+        </div>
+      </div>
+      
+      <%- include("footer") -%>
